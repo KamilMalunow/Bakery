@@ -1,0 +1,293 @@
+.store {
+    min-width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+
+.store-container {
+    padding: 20px;
+
+}
+
+.store-header {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.our-text {
+    font-size: 3rem;
+}
+
+.store-text {
+    font-size: 4rem;
+    color: #ef7998;
+    margin-left: 10px;
+}
+
+.categories-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+
+}
+
+.store-box {
+    list-style-type: none;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.store-box:hover {
+    background-color: black;
+    color: #ef7998;
+    transition: 0.4s;
+}
+
+
+.store-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.search-box {
+    background-color: #ef7998;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 20%;
+}
+
+.search-text {
+    width: 30%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom-right-radius: 3%;
+    border-top-right-radius: 3%;
+}
+
+.store-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+    margin: auto;
+    gap: 15px;
+
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.item-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.item-img>img {
+    width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.item-img>img:hover {
+    transform: scale(1.2);
+    transition: 2s;
+}
+
+.item>img {
+    width: 100%;
+}
+
+
+
+
+.item-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+
+
+
+}
+
+.item-info>h5 {
+    font-weight: 100;
+    font-size: 1.2rem;
+
+}
+
+h5 {
+    text-transform: capitalize;
+}
+
+
+
+
+.popup-image_layout>span {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    font-size: 40px;
+    color: rgb(128, 124, 124);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.popup-image_layout>span:hover{
+    color: rgb(194, 191, 191);
+    transition: 0.3s;
+}
+
+.hidden{
+    display:none;
+}
+
+.popup-image_layout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: fadeIn 0.5s;
+    
+}
+.popup-image_layout.fadeOut{
+    animation: fadeOut 0.5s both;
+}
+
+.popup-image_layout > img{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+.popup-arrow{
+    position: absolute;
+    top:50%;
+    border:none;
+    border-radius: 100%;
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: rgb(78, 77, 77);
+    color:#fff;
+
+}
+
+.popup-arrow:hover{
+    background-color: rgb(122, 120, 120);
+    transition: 0.3s;
+}
+
+.popup-arrow--left{
+    left:13%;
+}
+
+.popup-arrow--right{
+    right: 13%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .item-info>h5 {
+
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .store-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .popup-image_layout > img{
+        width: 95%;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .categories-boxes {
+        font-size: 70%;
+        gap: 2%;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .categories-boxes {
+        font-size: 50%;
+    }
+
+    .store-box {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .item-info {
+        flex-direction: column;
+
+    }
+
+    .item-info>h5 {
+        margin: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .store-items {
+        grid-template-columns: 1fr;
+
+    }
+
+    .item-info {
+        flex-direction: row;
+        min-height: 30%;
+
+    }
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

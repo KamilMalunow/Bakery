@@ -1,0 +1,94 @@
+.menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+
+.line {
+    width: 3em;
+    height: .3em;
+    background-color: #ef7998;
+    margin: .7em;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 1vh;
+    }
+
+    .phone-info,
+    .cart-info_border {
+        display: none;
+    }
+
+
+    .nav-list {
+        position: absolute;
+        left: 0;
+        top: 8vh;
+        width: 100%;
+    }
+
+    .nav-list_items {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 0;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    .nav-item {
+       display: none;
+    }
+
+    .nav-item.active {
+        display: block;
+    }
+
+    .nav-info {
+        display: flex;
+        flex-direction: row;
+        height: 76px;
+        position: relative;
+        width: 100%;
+        transform: translate(0);
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .nav-info.active {
+        transform: translate(0);
+        height: 200px;
+    }
+
+    .menu {
+        display: block;
+        transition: .3s ease-in-out;
+    }
+
+    .menu.active .line:first-child {
+        transform: translateY(-300px);
+    }
+
+    .menu.active .line:nth-child(2) {
+        transform: rotate(-405deg) translateY(8px);
+        transition: .3s ease-in-out;
+    }
+
+    .menu.active .line:nth-child(3) {
+        transform: rotate(-320deg) translateY(-10px);
+        transition: .3s ease-in-out;
+    }
+
+}

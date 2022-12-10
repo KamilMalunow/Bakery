@@ -1,0 +1,95 @@
+nav {
+
+    min-width: 100%;
+    padding: 8px 24px;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    max-height: 70px;
+
+}
+
+
+
+.nav-info {
+    display: grid;
+    grid-template-columns: 1fr 8fr 6fr;
+    height: 76px;
+    position: relative;
+    background-color: white;
+
+}
+
+.nav-list {
+    gap: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.nav-list_items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nav-item {
+    font-size: 1.7rem;
+    color: #ef7998;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover {
+    color: black;
+    transition: 1.5s;
+}
+
+
+.nav-info_items {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+
+.phone-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    gap: .3rem;
+}
+
+
+
+.cart-text,
+.icon-bin {
+    display: flex;
+    align-items: center;
+    margin: 0 0;
+}
+
+.cart-info_border {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 3px solid black;
+    border-radius: 1.2rem;
+    padding: 0 4px;
+}
+
+.cart-info_border:hover {
+
+    color: white;
+    background-color: #ef7998;
+    border: 3px solid #ef7998;
+    transition: 0.3s;
+}
